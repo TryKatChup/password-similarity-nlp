@@ -51,3 +51,14 @@ Every password in the first dataset was translated in a keypress sequence on an 
 
   e.g. ```PASSWORD! -> <c>password<s>1
           Hello@!! -> <s>hello<s>2<s>1<s>1```
+
+### Splitting dataset
+#### File: `split_dataset.py`
+Both datasets are splitted in training set (which is 90% of the original dataset) and test set (the remaining 10% of the original dataset). 
+
+### Training FastText
+#### File: `Training dataset.py`
+In this file FastText will be trained based on the given training set.
+
+#### FastText
+FastText is a word embeddin model created by Facebook which is capable to learn 
