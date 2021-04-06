@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Nowadays people tend to create more profiles or change password of their current profiles for security reasons. Existent passwords and literature-based words have a great impact on the candidate password. This could be a risk for the user privacy. For example, an user has the password `mum77` and he/she wants to create a new account for a different website. A candidate password could be `mommy1977`, which is a variation of `mum77`and it more risky if an attacker has discovered the first password in a leak. 
+Nowadays people tend to create more profiles or change password of their current profiles for security reasons. Existent passwords and literature-based words have a great impact on the candidate password. This could be a risk for the user privacy. For example, an user has the password `mum77` and he/she wants to create a new account for a different website. A candidate password could be `mommy1977`, which is a variation of `mum77` and it more risky if an attacker has discovered the first password in a leak. 
 
 The purpose of this project is to give a feedback about password similarity between the new password and the old one using Deep Neural Networks. 
 As a reference, a Scientific Article pulished at IEEE Symposium on Security and Privacy 2019 was chosen. Then the entire architecture was reimplemented and improved, and a comparison between the obtained results and the case study was made.
@@ -130,7 +130,7 @@ save_facebook_model(trained_model, "model_password_similarity.bin")
 print("Model saved successfully.")
 ```
 
-##### Compressing the model
+#### Compressing the model
 
 The trained model has 4.8GB. There are some problems about the size:
 
@@ -160,7 +160,7 @@ The compressed_model is 20MB.
 #### File: `w2kp_PRGraph.py` and `No_w2kp_PRGraph.py`
 
 For the evaluation of the models, compressed versions obtained with product quantization were used. In order to measure any performance differences between the original model and the compressed version, Bijeeta et al. model is chosen, with the following features:
-- word2keypress translation of the sequence of key pressed for the password;
+- translation of the sequence of key pressed for the password;
 - `min_gram = 1`;
 - `max_gram = 1`;
 - `epochs = 5`.
