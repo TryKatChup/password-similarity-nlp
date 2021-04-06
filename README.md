@@ -1,6 +1,6 @@
 # Password Similarity Detection Using Deep Neural Networks
 ---
-**gif? I have to decide the image/gif I will put here**
+![](images/logo2.png)
 
 ### Introduction
 
@@ -54,6 +54,8 @@ Every password in the first dataset was translated in a keypress sequence on an 
   e.g. ```PASSWORD! -> <c>password<s>1
           Hello@!! -> <s>hello<s>2<s>1<s>1```
 
+![](images/US_keyboard_layout.png)
+
 ### Splitting dataset
 #### File: `split_dataset.py`
 Both datasets are splitted in training set (which is 90% of the original dataset) and test set (the remaining 10% of the original dataset). 
@@ -73,7 +75,8 @@ Word2Vec is based on two architectures:
   
 CBOW is more faster and effective with larger dataset, however, despite the greater complexity, Skip-gram is capable to find _out of dictionary_ words for smaller datasets.
 
-**inserire immagine qui**
+![](./images/cbow_vs_skipgram.png)
+
 
 #### FastText
 FastText is a open source library created by Facebook which extends Word2Vec and is capable to learn word representation and sentence classification efficiently. The training is based on password n-grams. 
