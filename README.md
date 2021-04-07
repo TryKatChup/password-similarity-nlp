@@ -1,6 +1,6 @@
 # Password Similarity Detection Using Deep Neural Networks
 ---
-![](images/logo2.png)
+![](images/logodef3.png)
 
 ### Introduction
 
