@@ -7,7 +7,7 @@
 Nowadays people tend to create more profiles or change password of their current profiles for security reasons. Existent passwords and literature-based words have a great impact on the candidate password. This could be a risk for the user privacy. For example, an user has the password `mum77` and he/she wants to create a new account for a different website. A candidate password could be `mommy1977`, which is a variation of `mum77` and it more risky if an attacker has discovered the first password in a leak. 
 
 The purpose of this project is to give a feedback about password similarity between the new password and the old one using Deep Neural Networks. 
-As a reference, a Scientific Article pulished at IEEE Symposium on Security and Privacy 2019 was chosen. Then the entire architecture was reimplemented and improved, and a comparison between the obtained results and the case study was made.
+As a reference, a scientific article published at IEEE Symposium on Security and Privacy 2019 was chosen. Then the entire architecture was reimplemented and improved, and a comparison between the obtained results and the case study was made.
 
 ### Data pre-processing
 #### File: `preparing_dataset.py`
@@ -63,11 +63,11 @@ Both datasets are splitted in training set (which is 90% of the original dataset
 ### Training FastText
 #### File: `Training dataset.py` and `PasswordRetriever.py`
 In this file FastText will be trained based on the given training set.
-In order to understand better the file and FastText, Word2Vec is briefly introduced.
+In order to understand better `Training dataset.py` and FastText, Word2Vec is briefly introduced.
 
 #### Word2Vec
 Word2Vec is a set of architectural and optimization models which learn word embeddings from a large dataset, using deep neural networks.
-A model trained with Word2Vec can detect similar words (based on context) thanks to cosine similarity.
+A model trained with Word2Vec can detect similar words (based on context) thanks to _cosine similarity_.
 
 Word2Vec is based on two architectures:
 - **CBOW** (continuous bag of words): the main purpose is to combine the representation of surrounding words, in order to predict the word in the middle.
@@ -84,7 +84,7 @@ N-grams of a specific word that contains c_1...c_m characters are defined as fol
 
 *formula con gli ngram*
 
-For example, the ngrams of the word `world`, with n_mingram = 1 and n_maxram = 5 are:
+For example, the ngrams of the word `world`, with n_mingram = 1 and n_maxgram = 5 are:
 `world = {{w, o, r, l, d}, {wo, or, rl, ld}, {wor, orl, rld}, {world}}`
 `world` is represented as the subset of substrings with 1 and 5 as respectively minimum and maximum length.
 FastText, comparing to Word2Vec, is capable to obtain more _out of dictionary_ words, which are unknown during the training phase.
@@ -135,7 +135,7 @@ print("Model saved successfully.")
 
 #### Compressing the model
 
-The trained model has 4.8GB. There are some problems about the size:
+The trained model is 4.8 GB. There are some problems about the size:
 
 - Too much space occupied in memory.
 - It is harder to use the model in client/server architectures. Everyone should use this model, which can be sent as a payload. Embeddings are not reversible, and they guarantee password anonymization.
@@ -181,12 +181,21 @@ For a proper evaluation the following euristhics is adopted:
 - verifing if edit distance is greater than 5.
 
 #### Ground truth and prediction
+Ground truth is the ideal result expected and it is used in order to verify how much correct are model prediction.
+The term _prediction_ refers to the model output after the training. It is applied to new data when is required to verify an event probability.
 
+Ground truth depends on the candidate two passwords and the chosen euristhics, while prediction is obtained thanks to `gensim.similarity` function of the trained model (which is based on cosine similarity). In case of the `work2keypress` model, it is important to convert the candidate two password in key presses (`w2kp_PRGraph.py`).
 
 
 #### Precision and recall
+In order to find out _precision_ and _recall_ it is important to introduce few concepts:
+- **True positives (TP)**: its value increments only if both prediction and ground truth have a strictly positive value.
+- **False positives (FP)**: its value increments only if ground truth value is zero and  if prediction has a strictly positive value.
+- **False negatives (FP)**: its value increments only if ground truth value is strictly positive and if prediction value is zero.
 
+**Insert formula here**
 
+### Comparing the results of the models
 
 ### Graphic representation of words distance
 #### File: `visualize_embeddings.py`
