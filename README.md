@@ -1,11 +1,16 @@
 # Password Similarity Detection Using Deep Neural Networks
+<div align="center">
+    
 [![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-[![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+[![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+</div>
 
 
 <div align="center">
-    <img style="max-height: 100px" src="./images/logo.png" ></img>
+    <img style="max-height: 50px" src="./images/logo.png" ></img>
 </div>
 
 # Table of Contents
@@ -108,7 +113,7 @@ Word2Vec is based on two architectures:
 - **CBOW** (continuous bag of words): the main purpose is to combine the representation of surrounding words, in order to predict the word in the middle.
 - **Skip-gram:** similar to CBOW, except for the word in the middle, which is used to predict words related to the same context.
   
-CBOW is more faster and effective with larger dataset, however, despite the greater complexity, Skip-gram is capable to find _out of dictionary_ words for smaller datasets.
+CBOW is faster and effective with larger dataset, however, despite the greater complexity, Skip-gram is capable to find _out of dictionary_ words for smaller datasets.
 
 <div align="center">
     <img style="max-height: 256px" src="./images/cbow_vs_skipgram.png" ></img>
