@@ -281,13 +281,13 @@ In this case study, it is more important an higher value of recall. In this way 
 It is also important to not have too many false positives identified by couples of password which are different from each other but are considered similar. For this reason I have chosen an higher value of precision, comparing to Bijeeta et al. paper and α = 0.6.
 
 <div align="center">
-  <figure>
-    <img style="max-height: 350px" src="./images/w2kp_nmingram=1_epochs=5.png">
-    <figcaption> 
-        Precision and recall with word2keypress, n_mingram = 1, epochs = 5 (worst model)
-    </figcaption>
-  </figure>
+    <img style="max-height: 350px" src="./images/w2kp_nmingram=1_epochs=5.png"></img>
 </div>
+
+<div align="center">
+Precision and recall with word2keypress, n_mingram = 1, epochs = 5 (worst model)
+</div>
+
 <div align="center">
 <figure>
     <img style="max-height: 350px" src="./images/no_w2kp_nmingram=2_epochs=5.png">
