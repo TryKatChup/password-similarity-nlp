@@ -5,7 +5,7 @@
 
 
 <div align="center">
-    <img style="max-height: 256px" src="./images/logo.png" ></img>
+    <img style="max-height: 100px" src="./images/logo.png" ></img>
 </div>
 
 # Table of Contents
