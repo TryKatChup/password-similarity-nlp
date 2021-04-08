@@ -14,7 +14,7 @@
 
 
 <div align="center">
-    <img style="max-height: 50px" src="./images/logo.png" ></img>
+    <img src="./images/logo.png" ></img>
 </div>
 
 # Table of Contents
