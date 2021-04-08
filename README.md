@@ -1,4 +1,8 @@
-# Password Similarity Detection Using Deep Neural Networks
+<div align="center">
+   
+   # Password Similarity Detection Using Deep Neural Networks    
+</div>
+
 <div align="center">
     
 [![Ask Me Anything!](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
