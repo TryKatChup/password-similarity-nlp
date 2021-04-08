@@ -292,6 +292,8 @@ It is also important to not have too many false positives identified by couples 
 Precision and recall with word2keypress, n_mingram = 1, epochs = 5 (worst model)
 </div>
 
+<br></br>
+
 <div align="center">
 <figure>
     <img style="max-height: 350px" src="./images/no_w2kp_nmingram=2_epochs=5.png"></img>
