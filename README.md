@@ -283,13 +283,17 @@ It is also important to not have too many false positives identified by couples 
 <div align="center">
   <figure>
     <img style="max-height: 350px" src="./images/w2kp_nmingram=1_epochs=5.png">
-    <figcaption> Precision and recall with word2keypress, n_mingram = 1, epochs = 5 (worst model)</figcaption>
+    <figcaption> 
+        Precision and recall with word2keypress, n_mingram = 1, epochs = 5 (worst model)
+    </figcaption>
   </figure>
 </div>
 <div align="center">
 <figure>
     <img style="max-height: 350px" src="./images/no_w2kp_nmingram=2_epochs=5.png">
-    <figcaption> Precision and recall without word2keypress, n_mingram = 2, epochs = 5 (best model).</figcaption>
+    <figcaption> 
+        Precision and recall without word2keypress, n_mingram = 2, epochs = 5 (best model).
+    </figcaption>
   </figure>
 </div>
 
