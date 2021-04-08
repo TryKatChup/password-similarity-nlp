@@ -219,17 +219,21 @@ For the evaluation of the models, compressed versions obtained with product quan
 An effective valutation of both model is based on _precision_ and _recall_. 
 Not remarkable differences were observed: for this reason only the compressed version of the models are considered.
 <div align="center">
-  <figure>
-    <img style="max-height: 350px" src="./images/big_model.png">
-    <figcaption> Precision and recall in the uncompressed model of Bijeeta et al.</figcaption>
-  </figure>
+    <img style="max-height: 350px" src="./images/big_model.png"></img>
 </div>
+
 <div align="center">
-<figure>
-    <img style="max-height: 350px" src="./images/w2kp_nmingram=1_epochs=5.png">
-    <figcaption> Precision and recall in the compressed model of Bijeeta et al.</figcaption>
-  </figure>
+Precision and recall in the uncompressed model of Bijeeta et al.
 </div>
+
+<div align="center">
+    <img style="max-height: 350px" src="./images/w2kp_nmingram=1_epochs=5.png"></img>
+</div>
+
+<div align="center">
+Precision and recall in the compressed model of Bijeeta et al.
+</div>
+
 
 ## Euristhics
 For a proper evaluation the following euristhics is adopted:
@@ -290,14 +294,12 @@ Precision and recall with word2keypress, n_mingram = 1, epochs = 5 (worst model)
 
 <div align="center">
 <figure>
-    <img style="max-height: 350px" src="./images/no_w2kp_nmingram=2_epochs=5.png">
-    <figcaption> 
-        Precision and recall without word2keypress, n_mingram = 2, epochs = 5 (best model).
-    </figcaption>
-  </figure>
+    <img style="max-height: 350px" src="./images/no_w2kp_nmingram=2_epochs=5.png"></img>
 </div>
 
-
+<div align="center">
+Precision and recall without word2keypress, n_mingram = 2, epochs = 5 (best model).
+</div>
 
 ## Bijeeta et al. model issues
 The worst performances were noticed in the Bijeeta et al. model. The main problems are:
