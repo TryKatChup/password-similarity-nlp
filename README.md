@@ -196,8 +196,34 @@ In order to find out _precision_ and _recall_ it is important to introduce few c
 **Insert formula here**
 
 ### Comparing the results of the models
+In order to classify passwords, it is necessary to define a threeshold α, which it is chosen considering the best precision and recall values.
+
+- Model with `word2keypress`, `n_mingram = 1`, `epochs = 5` (Bijeeta et al.):
+  - α = 0.5: precision ≈ 57%, recall ≈ 95%
+  - α = 0.6: precision ≈ 67%, recall ≈ 89%
+
+- Model without `word2keypress`, `n_mingram = 2`, `epochs = 5`:
+  - α = 0.5: precision ≈ 65%, recall ≈ 95%
+  - α = 0.6: precision ≈ 77%, recall ≈ 89%
+
+In this case study, it is more important an higher value of recall. In this way more similar passwords are detected.   
+It is also important to not have too many false positives identified by couples of password which are different from each other but are considered similar. For this reason I have chosen an higher value of precision, comparing to Bijeeta et al. paper and α = 0.6.
+
+### Bijeeta et al. model issues
+The worst performances were noticed in the Bijeeta et al. model. The main problems are:
+- `word2keypress` library translates each character as a key press sequence. When a password is expressed in camel notation, an alternation of capital letters and lowercase letters is present. As a consequence, different passwords in camel notation will be considered similar, because of the repetition of `<s>` and `<c>`.
+- Two passwords expressed as key presses like:
+    - `$1mp@t1c*`  which is translated as `<s>41mp<s>2t1c<s>8`
+    - `#wlng%p*m}` which is translated as `<s>3wlng<s>5p<s>8m<s>[`
+will be considered similar. `SHIFT` is translated as `<s>`: for this reason two passwords which are secure will appear similar.
+
+- Setting `n_mingram = 1` make the evaluation less precise than using `n_mingram = 2`.
+  In fact, in passwords, single characters don't depend on rules (unlike the english literature). There are multiple factors really different from each other in order to establish a set of rules for the position of a character in a password, so it is impossible to define how a character is placed.  
+
 
 ### Graphic representation of words distance
 #### File: `visualize_embeddings.py`
 
 To simplify the comprehension of the project topic, password similarity is represented with a 3-dimensional graphic. `t-SNE` algorithm is used to reduce the model dimension from 200 to 3. In the next figure it is possible to see the top 5 most similar passwords to `ipwnedyou` and `numBerOne` and their distances. 
+
+![](images/3dplot.png)
