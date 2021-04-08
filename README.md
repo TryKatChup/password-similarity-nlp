@@ -226,6 +226,8 @@ Not remarkable differences were observed: for this reason only the compressed ve
 Precision and recall in the uncompressed model of Bijeeta et al.
 </div>
 
+<br></br>
+
 <div align="center">
     <img style="max-height: 350px" src="./images/w2kp_nmingram=1_epochs=5.png"></img>
 </div>
